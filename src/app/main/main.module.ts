@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 import { CompaniesComponent } from './companies/companies.component';
 import { BiddingsComponent } from './biddings/biddings.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
   declarations: [
     CompaniesComponent,
-    BiddingsComponent
+    BiddingsComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,

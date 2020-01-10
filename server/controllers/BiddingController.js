@@ -2,7 +2,7 @@ const BiddingModel = require('../models/BiddingModel');
 
 const controller = {
 
-    all: (req, res) => {
+    all: (req, res, userEmail) => {
       BiddingModel.find({}).lean().exec((error, biddings) => {
 
         if (error) {
