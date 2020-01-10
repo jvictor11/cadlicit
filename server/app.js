@@ -20,4 +20,6 @@ app.use((req, res, next) => {
   res.status(404).send('Rota não encontrada');
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log('http://localhost:3000');
+});

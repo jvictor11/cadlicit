@@ -1,9 +1,9 @@
-const BiddingModel = require('../models/BiddingModel');
+const CompanyModel = require('../models/CompanyModel');
 
 const controller = {
 
     all: (req, res) => {
-      BiddingModel.find({}).lean().exec((error, biddings) => {
+      CompanyModel.find({}).lean().exec((error, companies) => {
 
         if (error) {
           return res.status(404).json({
@@ -12,7 +12,7 @@ const controller = {
           });
         }
 
-        return res.status(200).json(biddings);
+        return res.status(200).json(companies);
 
       });
     },

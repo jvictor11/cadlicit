@@ -1,0 +1,12 @@
+<h2>Licitações</h2>
+
+<div *ngIf="(biddings$ | async)?.length>0; else noBiddings">
+    <ul>
+        <li *ngFor="let bidding of (biddings$ | async)">{{ bidding.name }}</li>
+    </ul>
+</div>
+
+<ng-template #noBiddings>
+    Não existem licitações cadastradas.
+    <a href="/biddings/register">Clique aqui</a> para cadastrar
+</ng-template>

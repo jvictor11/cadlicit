@@ -1,0 +1,12 @@
+<h2>Empresas</h2>
+
+<div *ngIf="(companies$ | async)?.length>0; else noCompanies">
+    <ul>
+        <li *ngFor="let company of (companies$ | async)">{{ company.name }}</li>
+    </ul>
+</div>
+
+<ng-template #noCompanies>
+    Não existem empresas cadastradas.
+    <a href="/companies/register">Clique aqui</a> para cadastrar
+</ng-template>
