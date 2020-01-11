@@ -3,6 +3,7 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const api = require('./routes/api');
+const auth = require('./routes/auth');
 
 const app = express();
 
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/cadlicit', { useNewUrlParser: true, 
 // Rotas
 
 app.use('/api', api);
+app.use('/auth', auth);
 
 app.use((req, res, next) => {
   res.status(404).send('Rota não encontrada');

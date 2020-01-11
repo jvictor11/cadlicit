@@ -1,6 +1,5 @@
-const states = {
-  estados: [
-  {
+const states = [{
+  acre: {
   sigla: "AC",
   nome: "Acre",
   cidades: [
@@ -28,7 +27,7 @@ const states = {
   "Xapuri"
   ]
   },
-  {
+  alagoas: {
   sigla: "AL",
   nome: "Alagoas",
   cidades: [
@@ -136,7 +135,7 @@ const states = {
   "Viçosa"
   ]
   },
-  {
+  amazonas: {
   sigla: "AM",
   nome: "Amazonas",
   cidades: [
@@ -204,7 +203,7 @@ const states = {
   "Urucurituba"
   ]
   },
-  {
+  amapa: {
   sigla: "AP",
   nome: "Amapá",
   cidades: [
@@ -226,7 +225,7 @@ const states = {
   "Vitória do Jari"
   ]
   },
-  {
+  bahia: {
   sigla: "BA",
   nome: "Bahia",
   cidades: [
@@ -649,7 +648,7 @@ const states = {
   "Xique-Xique"
   ]
   },
-  {
+  ceara: {
   sigla: "CE",
   nome: "Ceará",
   cidades: [
@@ -839,14 +838,14 @@ const states = {
   "Viçosa do Ceará"
   ]
   },
-  {
+  distitofederal: {
   sigla: "DF",
   nome: "Distrito Federal",
   cidades: [
   "Brasília"
   ]
   },
-  {
+  espiritosanto: {
   sigla: "ES",
   nome: "Espírito Santo",
   cidades: [
@@ -930,7 +929,7 @@ const states = {
   "Vitória"
   ]
   },
-  {
+  goias: {
   sigla: "GO",
   nome: "Goiás",
   cidades: [
@@ -1182,7 +1181,7 @@ const states = {
   "Vila Propício"
   ]
   },
-  {
+  maranhao: {
   sigla: "MA",
   nome: "Maranhão",
   cidades: [
@@ -1405,7 +1404,7 @@ const states = {
   "Zé Doca"
   ]
   },
-  {
+  minasgerais: {
   sigla: "MG",
   nome: "Minas Gerais",
   cidades: [
@@ -2264,7 +2263,7 @@ const states = {
   "Wenceslau Braz"
   ]
   },
-  {
+  matogrossodosul: {
   sigla: "MS",
   nome: "Mato Grosso do Sul",
   cidades: [
@@ -2347,7 +2346,7 @@ const states = {
   "Vicentina"
   ]
   },
-  {
+  matogrosso: {
   sigla: "MT",
   nome: "Mato Grosso",
   cidades: [
@@ -2492,7 +2491,7 @@ const states = {
   "Vila Rica"
   ]
   },
-  {
+  para: {
   sigla: "PA",
   nome: "Pará",
   cidades: [
@@ -2641,7 +2640,7 @@ const states = {
   "Xinguara"
   ]
   },
-  {
+  paraiba: {
   sigla: "PB",
   nome: "Paraíba",
   cidades: [
@@ -2870,7 +2869,7 @@ const states = {
   "Zabelê"
   ]
   },
-  {
+  pernambuco: {
   sigla: "PE",
   nome: "Pernambuco",
   cidades: [
@@ -3061,7 +3060,7 @@ const states = {
   "Xexéu"
   ]
   },
-  {
+  piaui: {
   sigla: "PI",
   nome: "Piauí",
   cidades: [
@@ -3289,7 +3288,7 @@ const states = {
   "Wall Ferraz"
   ]
   },
-  {
+  parana: {
   sigla: "PR",
   nome: "Paraná",
   cidades: [
@@ -3694,7 +3693,7 @@ const states = {
   "Xambrê"
   ]
   },
-  {
+  riodejaneiro: {
   sigla: "RJ",
   nome: "Rio de Janeiro",
   cidades: [
@@ -3792,7 +3791,7 @@ const states = {
   "Volta Redonda"
   ]
   },
-  {
+  riograndedonorte: {
   sigla: "RN",
   nome: "Rio Grande do Norte",
   cidades: [
@@ -3965,7 +3964,7 @@ const states = {
   "Vila Flor"
   ]
   },
-  {
+  rondonia: {
   sigla: "RO",
   nome: "Rondônia",
   cidades: [
@@ -4023,7 +4022,7 @@ const states = {
   "Vilhena"
   ]
   },
-  {
+  roraima: {
   sigla: "RR",
   nome: "Roraima",
   cidades: [
@@ -4044,7 +4043,7 @@ const states = {
   "Uiramutã"
   ]
   },
-  {
+  riograndedosul: {
   sigla: "RS",
   nome: "Rio Grande do Sul",
   cidades: [
@@ -4546,7 +4545,7 @@ const states = {
   "Xangri-lá"
   ]
   },
-  {
+  santacatarina: {
   sigla: "SC",
   nome: "Santa Catarina",
   cidades: [
@@ -4845,7 +4844,7 @@ const states = {
   "Zortéa"
   ]
   },
-  {
+  sergipe: {
   sigla: "SE",
   nome: "Sergipe",
   cidades: [
@@ -4926,7 +4925,7 @@ const states = {
   "Umbaúba"
   ]
   },
-  {
+  saopaulo: {
   sigla: "SP",
   nome: "São Paulo",
   cidades: [
@@ -5577,7 +5576,7 @@ const states = {
   "Zacarias"
   ]
   },
-  {
+  tocantins: {
   sigla: "TO",
   nome: "Tocantins",
   cidades: [
@@ -5722,8 +5721,6 @@ const states = {
   "Xambioá"
   ]
   }
-  ]
-  }
-console.log(states);
+  }]
 
 module.exports = states;

@@ -1,4 +1,3 @@
-import { States } from './../states';
 import { Observable } from 'rxjs';
 import { MainService } from './../main.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,12 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  states$: Observable<States[]>;
+  states$: Observable<any>;
 
   constructor(private mainService: MainService) { }
 
   ngOnInit() {
-    console.log(this.mainService.getStates());
     this.states$ = this.mainService.getStates();
   }
 

@@ -1,3 +1,4 @@
+import { MaterialModule } from './../material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -15,7 +16,8 @@ import { MainComponent } from './main/main.component';
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    MaterialModule
   ]
 })
 export class MainModule { }

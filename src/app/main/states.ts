@@ -1,3 +1,0 @@
-export interface States {
-  states;
-}

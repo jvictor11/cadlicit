@@ -1,5 +1,4 @@
 import { catchError } from 'rxjs/operators';
-import { States } from './states';
 import { Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -11,12 +10,18 @@ export class MainService {
 
   readonly server = 'http://localhost:3000/api';
 
+  readonly cep = 'https://viacep.com.br/ws'; // /json
+
   constructor(
     private http: HttpClient,
   ) { }
 
-  getStates(): Observable<States[]> {
-    return this.http.get<States[]>(`${this.server}/utils/states`)
+  getCep(cep) {
+    return this.http.get(`${this.cep}/${cep}/json`);
+  }
+
+  getStates(): Observable<any> {
+    return this.http.get<any>(`${this.server}/utils/states`)
     .pipe(
       catchError((e) => {
         console.error(e);
