@@ -1,6 +1,7 @@
 const UserModel = require('../models/UserModel');
 const bcrypt = require('bcryptjs');
 const constant = require('../utils/consts');
+const jwt = require('jsonwebtoken');
 
 module.exports = {
     register: async (req, res) => {
@@ -28,6 +29,24 @@ module.exports = {
     },
 
     login: (req, res) => {
+      const password = req.body.password;
+      const email = req.body.email;
 
+      UserModel.findOne({email: email}).lean().exec((error, user) => {
+        if (error) {
+          return res.status(404).json({message: 'Usuário ou senha inexistente', error: error});
+        } else {
+          const auth_error = (password === '' || password === null || !user);
+
+          if (!auth_error) {
+             if (bcrypt.compareSync(password, user.password)) {
+              let token = jwt.sign({ _id: user._id }, constant.JWTKEY, { expiresIn: constant.EXPIRESJWT });
+              delete user.password
+              res.status(200).json({ ...user, token: token });
+             }
+          }
+          return res.status(404).json({message: 'Usuário ou senha inexistente'});
+        }
+      });
     }
 }
