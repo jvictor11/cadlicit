@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from './user';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AuthService {
   private subjUser$: BehaviorSubject<User> = new BehaviorSubject(null);
   private subjLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   register(user: User): Observable<User> {
     return this.http.post<User>(`${this.server}/register`, user);
@@ -38,6 +39,13 @@ export class AuthService {
 
   getUser(): Observable<User> {
     return this.subjUser$.asObservable();
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.subjLoggedIn$.next(false);
+    this.subjUser$.next(null);
+    this.router.navigateByUrl('/auth/login');
   }
 
 

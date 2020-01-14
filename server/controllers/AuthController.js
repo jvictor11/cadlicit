@@ -40,12 +40,15 @@ module.exports = {
 
           if (!auth_error) {
              if (bcrypt.compareSync(password, user.password)) {
-              let token = jwt.sign({ _id: user._id }, constant.JWTKEY, { expiresIn: constant.EXPIRESJWT });
+              const token = jwt.sign({ _id: user._id }, constant.JWTKEY, { expiresIn: constant.EXPIRESJWT });
               delete user.password
               res.status(200).json({ ...user, token: token });
+             } else {
+                return res.status(404).json({message: 'Usuário ou senha inexistente'});
              }
+          } else {
+            return res.status(404).json({message: 'Usuário ou senha inexistente'});
           }
-          return res.status(404).json({message: 'Usuário ou senha inexistente'});
         }
       });
     }

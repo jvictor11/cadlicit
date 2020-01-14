@@ -6,18 +6,26 @@ import { MainRoutingModule } from './main-routing.module';
 import { CompaniesComponent } from './companies/companies.component';
 import { BiddingsComponent } from './biddings/biddings.component';
 import { MainComponent } from './main/main.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PieChartComponent } from './dashboard/pie-chart/pie-chart.component';
+import { BarChartComponent } from './dashboard/bar-chart/bar-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
   declarations: [
     CompaniesComponent,
     BiddingsComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent,
+    PieChartComponent,
+    BarChartComponent,
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ChartsModule
   ]
 })
 export class MainModule { }
