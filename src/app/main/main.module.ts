@@ -11,7 +11,6 @@ import { PieChartComponent } from './dashboard/pie-chart/pie-chart.component';
 import { BarChartComponent } from './dashboard/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
 
-
 @NgModule({
   declarations: [
     CompaniesComponent,

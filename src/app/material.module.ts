@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import {
 
@@ -39,7 +40,7 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule
+  MatTreeModule,
 
 } from '@angular/material';
 
@@ -84,7 +85,8 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    CommonModule
+    CommonModule,
+    DragDropModule
 
   ],
   declarations: []

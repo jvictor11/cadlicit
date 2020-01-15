@@ -15,5 +15,6 @@ router.get('/company/all', CompanyController.all);
 // Rotas Utils
 
 router.get('/utils/states', UtilsController.states);
+router.post('/utils/extensive', UtilsController.extensive);
 
 module.exports = router;
