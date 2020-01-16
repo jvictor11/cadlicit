@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
                     };
     this.authService.register(u)
         .subscribe(
-          (u) => {
+          () => {
             this.snackBar.open(
               `Usuário Registrado com Sucesso, Seja Bem Vindo(a) ${u.name}`,
               'OK', { duration: 3000 }

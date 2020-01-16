@@ -2,7 +2,7 @@
   SCAL
   <span fxFlex></span>
 
-  <ng-container *ngIf="!(authenticated$ | async)" >
+  <ng-container *ngIf="(authenticated$ | async) === false">
       <button mat-button routerLink="/auth/login">
         <mat-icon>input</mat-icon>
         &nbsp;Login
