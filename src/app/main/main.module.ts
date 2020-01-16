@@ -10,6 +10,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PieChartComponent } from './dashboard/pie-chart/pie-chart.component';
 import { BarChartComponent } from './dashboard/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { AnalysisComponent } from './biddings/analysis/analysis.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { ChartsModule } from 'ng2-charts';
     DashboardComponent,
     PieChartComponent,
     BarChartComponent,
+    AnalysisComponent,
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
     MaterialModule,
-    ChartsModule
+    ChartsModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModule { }

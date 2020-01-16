@@ -1,0 +1,53 @@
+<div  fxLayout="row" fxLayoutAlign="space-around center" >
+  <div align="center" fxLayout="row" fxLayoutAlign="center center"  class="register-form">
+
+    <form role="form" [formGroup]="formAnalysis" (ngSubmit)="onSubmit()">
+
+      <mat-card class="mat-elevation-z8" flex="80">
+
+        <mat-card-title>Pré Análise de Editais</mat-card-title>
+
+        <mat-card-content fxLayout="column" fxLayoutAlign="space-around stretch">
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex>
+              <input matInput type="number" formControlName="silt"
+                autocomplete="silt" placeholder="Silt Nº">
+            </mat-form-field>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex>
+              <input matInput type="date" formControlName="datapubli"
+                class="form-control" value="" placeholder="Data de Publicação" >
+            </mat-form-field>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+
+            <mat-form-field  fxFlex="45">
+              <input matInput type="date" formControlName="databusca" placeholder="Data de Busca">
+            </mat-form-field>
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" formControlName="orgao" class="form-control"  autocomplete="orgao" placeholder="Orgão">
+            </mat-form-field>
+
+          </div>
+
+
+          <div fxLayout="row" fxLayoutAlign="end end" >
+              <button mat-button color="primary" type="submit">
+                <mat-icon>done</mat-icon>&nbsp;Salvar
+              </button>
+          </div>
+
+
+
+        </mat-card-content>
+      </mat-card>
+    </form>
+
+
+  </div>
+</div>
+<!--[disabled]="!formAnalysis.valid"-->
