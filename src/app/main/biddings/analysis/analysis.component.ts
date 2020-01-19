@@ -1,6 +1,6 @@
 import { Analysis } from './../analysis';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-analysis',
@@ -28,12 +28,7 @@ export class AnalysisComponent implements OnInit {
     valetransp: [''],
     iss: [''],
     combustivel: [''],
-    veiculo: this.fb.group({
-      item: [''],
-      especificacao: [''],
-      qtd: [''],
-      valoruni: ['']
-    }),
+    veiculo: this.fb.array(['']),
     servico: this.fb.group({
       atividade: [''],
       qtd: ['']
@@ -45,6 +40,8 @@ export class AnalysisComponent implements OnInit {
     observacoes: ['']
   });
 
+  veiculo = this.formAnalysis.get('veiculo') as FormArray;
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -52,6 +49,17 @@ export class AnalysisComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formAnalysis.value);
+  }
+
+  addVeiculo() {
+    this.veiculo.push(
+      this.fb.group({
+        item: [''],
+        especificacao: [''],
+        qtd: [''],
+        valoruni: ['']
+      })
+    );
   }
 
 }
