@@ -1,0 +1,66 @@
+<div  fxLayout="row" fxLayoutAlign="space-around center" >
+  <div align="center" fxLayout="row" fxLayoutAlign="center center"  class="register-form">
+
+    <form role="form" [formGroup]="formBadge" (ngSubmit)="onSubmit()">
+
+      <mat-card class="mat-elevation-z8" flex="80">
+
+        <mat-card-title>Criar Crachá VIGSEG | ROD</mat-card-title>
+
+        <mat-card-content fxLayout="column" fxLayoutAlign="space-around stretch">
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex>
+              <input matInput type="text" formControlName="nome"
+                autocomplete="nome" placeholder="Nome">
+            </mat-form-field>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field fxFlex>
+              <input matInput type="text" formControlName="funcao"
+                class="form-control" value="" autocomplete="funcao" placeholder="Função" >
+            </mat-form-field>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+
+            <mat-form-field  fxFlex="45">
+              <input matInput type="text" formControlName="empresa"
+                 autocomplete="empresa" placeholder="Empresa">
+            </mat-form-field>
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" formControlName="cpf"
+                    class="form-control"  autocomplete="off" placeholder="CPF">
+            </mat-form-field>
+
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+
+            <mat-form-field  fxFlex="45">
+              <input matInput type="text" formControlName="rg"
+                 autocomplete="rg" placeholder="RG">
+            </mat-form-field>
+            <mat-form-field fxFlex="45">
+              <input matInput type="text" formControlName="admissao"
+                    class="form-control"  autocomplete="admissao" placeholder="Admissão">
+            </mat-form-field>
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-form-field  fxFlex="45">
+              <input matInput type="text" formControlName="matricula"
+                 autocomplete="matricula" placeholder="Matrícula">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="end end" >
+              <button mat-button color="primary" type="submit" [disabled]="!formBadge.valid">
+                <mat-icon>done</mat-icon>&nbsp;Salvar
+              </button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+</div>

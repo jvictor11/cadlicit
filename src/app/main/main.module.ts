@@ -12,6 +12,7 @@ import { BarChartComponent } from './dashboard/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { AnalysisComponent } from './biddings/analysis/analysis.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BadgeComponent } from './badge/badge.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PieChartComponent,
     BarChartComponent,
     AnalysisComponent,
+    BadgeComponent,
   ],
   imports: [
     CommonModule,
